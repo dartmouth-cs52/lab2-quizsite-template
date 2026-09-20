@@ -1,12 +1,17 @@
 {
-  "name": "lab2-tests",
+  "name": "lab2-quizsite-tests",
   "version": "1.0.0",
-  "description": "Cypress tests for lab2 quizzical assignment",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "cypress run",
-    "test:open": "cypress open"
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "setup": "playwright install --with-deps chromium"
   },
   "devDependencies": {
-    "cypress": "^15.5.0"
+    "@playwright/test": "^1.63.0"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
