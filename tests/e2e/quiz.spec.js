@@ -39,7 +39,7 @@ const pickAnswer = async (page, name, index = 0) => {
 test.describe('the quiz page', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('index.html');
-    // Your quiz is probably built after quiz.json loads, so give it a moment
+    // Your quiz is probably built after your JSON file loads, so give it a moment
     // to appear. If it never does, the individual checks below say so.
     await radios(page)
       .first()
